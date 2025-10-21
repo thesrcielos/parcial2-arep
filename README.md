@@ -3,7 +3,7 @@
 ## Prerrequisites
 * Maven
 * Git
-* Java 17
+* Java 17+
 
 ## Installation
 clone the repository
@@ -84,5 +84,5 @@ Math Servcice Server 2 Instance
 Frontend
 ![](assets/img5.png)
 
-## Video
+## Video AWS Deployment
 https://pruebacorreoescuelaingeduco-my.sharepoint.com/:v:/g/personal/diego_macia-d_mail_escuelaing_edu_co/EbPxUUI1G_tMlvk8akd789cBjKUOVH-g4b60tBW4mhlZ3g?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=YPUEDH

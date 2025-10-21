@@ -1,5 +1,6 @@
 package org.eci.arep.proxy.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,13 +12,16 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Arrays;
 
 @RestController
 @RequestMapping()
 public class ProxyController {
     private static final String USER_AGENT = "Mozilla/5.0";
-    private static final String[] servicesUrl = new String[]{"http://localhost:8080"};
+    private static final String[] servicesUrl = new String[]{"http://54.147.161.44:8080",  "http://3.88.51.162:8080"};
     private static int server = 0;
+    public ProxyController(){
+    }
 
     public String httpRequestMathServiceLucasSeq(String GET_URL) throws IOException {
         URL obj = new URL(GET_URL);

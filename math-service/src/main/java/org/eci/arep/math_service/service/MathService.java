@@ -14,6 +14,7 @@ public class MathService {
     }
     public LucasOperationResponse getLucasSeqValue(long value){
         if (value < 0){
+            System.out.println("Secuencia de Lucas " + "input " + value + " output " + "");
             return new LucasOperationResponse("Secuencia de Lucas", value, "");
         }
         List<Long> values = new ArrayList<>();
@@ -23,6 +24,7 @@ public class MathService {
             res.append(num).append(", ");
         }
         res = new StringBuilder(res.substring(0, res.length() - 2));
+        System.out.println("Secuencia de Lucas " + "input " + value + " output " + res.toString());
         return new LucasOperationResponse("Secuencia de Lucas", value, res.toString());
     }
 

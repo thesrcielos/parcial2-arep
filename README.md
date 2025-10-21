@@ -46,6 +46,16 @@ Math Service
 java -jar target/math-service-0.0.1-SNAPSHOT.jar 
 ```
 
+## AWS Deployment
+Create 3 instances of EC2 Amazon Linux 2023 for each machine do the following
+
+Install the following packages
+```
+sudo yum install git -y
+sudo yum install maven -y
+sudo dfn install java-17-amazon-corretto -y
+```
+Then follow the instructions given in the installation process. In two machines execute Math Service Server and in one the Proxy Server
 ## Enpoints
 ### Proxy Server
 * /lucasseq?value={value} recieves a value to make a http reques to a math service instance to calculate lucas sequence
@@ -73,3 +83,6 @@ Math Servcice Server 2 Instance
 ![](assets/img4.png)
 Frontend
 ![](assets/img5.png)
+
+## Video
+https://pruebacorreoescuelaingeduco-my.sharepoint.com/:v:/g/personal/diego_macia-d_mail_escuelaing_edu_co/EbPxUUI1G_tMlvk8akd789cBjKUOVH-g4b60tBW4mhlZ3g?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=YPUEDH

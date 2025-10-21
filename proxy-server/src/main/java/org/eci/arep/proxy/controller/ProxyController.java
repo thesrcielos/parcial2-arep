@@ -13,10 +13,10 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 @RestController
-@RequestMapping("/lucasseq")
+@RequestMapping()
 public class ProxyController {
     private static final String USER_AGENT = "Mozilla/5.0";
-    private static final String[] servicesUrl = new String[]{};
+    private static final String[] servicesUrl = new String[]{"http://localhost:8080"};
     private static int server = 0;
 
     public String httpRequestMathServiceLucasSeq(String GET_URL) throws IOException {
@@ -48,14 +48,15 @@ public class ProxyController {
         System.out.println("GET DONE");
         return answer;
     }
-    @GetMapping()
-    public ResponseEntity<?> getLucasSequence(@RequestParam Long value) throws IOException {
+    @GetMapping("/lucasseq")
+    public ResponseEntity<?> getLucasSequence(@RequestParam long value) throws IOException {
         String url = getLucasSeqServiceUrl(value);
         return ResponseEntity.ok(httpRequestMathServiceLucasSeq(url));
     }
 
-    private String getLucasSeqServiceUrl(Long value){
+    private String getLucasSeqServiceUrl(long value){
         String host = servicesUrl[server];
-        return host + "?lucasseq=" + value;
+        server = server == servicesUrl.length - 1? 0 : server + 1;
+        return host + "/lucasseq?value=" + value;
     }
 }

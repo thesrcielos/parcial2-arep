@@ -1,13 +1,13 @@
-package org.eci.arep.math_service;
+package org.eci.arep.proxy;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MathServiceApplication {
+public class ProxyApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MathServiceApplication.class, args);
+		SpringApplication.run(ProxyApplication.class, args);
 	}
 
 }
